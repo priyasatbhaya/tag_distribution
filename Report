@@ -1,0 +1,55 @@
+
+							DAY 1: 09.05.17
+
+
+1.OWL Web Language: java interface used to represent Semantic Web ontologies, collections of triplets
+
+
+	1.1.Semantic Web:
+	a proposed development of the World Wide Web in which data in web pages is structured and tagged in such a way that it can be read directly by 		computers.
+
+	1.2.RDF(Resource Description Framework):
+	a model for encoding semantic relationships between items of data so that these relationships can be interpreted computationally.One 		apilcation of RDF is data integration and data sharing, RDF triplets uses graphs as its Data structure
+
+	1.3.Ontology:
+	study of entities and their relations. The W3C Web Ontology Language (OWL) is a Semantic Web language designed to represent rich and complex 		knowledge about things, groups of things, and relations between things.
+
+	1.4.jena: a java API for RDF
+
+2.Data Integration: Data integration is the combination of technical and business processes used to combine data from disparate sources into meaningful and valuable information. A complete data integration solution delivers trusted data from a variety of sources.
+
+
+							DAY 2: 10.05.17
+
+
+Discussion on the three possible topics to be worked on, they are:
+
+	1. A lightweight parser for data transformation.
+	2. An UI to support data annotation. This Interface will be designed as a plugin to a software tool. 
+	3. A tool to count the XML tags different ontologies uses, to find the distribution of each tag.
+
+We went with the third option, shared some ontologies and an excel sheet which manually counted the tags, to be used for testing purpose.
+
+The Idea and the work plan: The main idea is to find the distribution of each tag among different files.
+
+	1. Create a parser which identifies the first occurrence of each tag inside <Ontology> tag or <owl:Ontology> tag.
+	2. Create a table with each tag as the row and two columns one with a bit string which represents in which all file the particular tag is 		present, where the position of the bit represents the file number and the second column with the total number of files the tag is present in.
+	3. Store this table in pickle format for further use.
+
+
+
+							DAY 3: 11.05.17
+
+
+1. Created Git private Repository named tag_distribution with biswanathdutta and priyasatbhaya as the collaborators.
+
+While parsing we consider the tags inside the <Ontology> tag or <owl:Ontology> tag, we have three cases for that 
+
+	1. <Ontology>
+	2. <owl:Ontology>
+	3. sometimes the tags are present inside <Annotation> tag as the abbreviatedIRI in <AnnotationProperty/> tag.
+		Example
+		<Annotation><AnnotationProperty abbreviatedIRI="rdfs:comment"/> </Annotation>
+
+
+
