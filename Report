@@ -43,6 +43,8 @@ The Idea and the work plan: The main idea is to find the distribution of each ta
 
 1. Created Git private Repository named tag_distribution with biswanathdutta and priyasatbhaya as the collaborators.
 
+2. We will be considering .xrdf and .owl files for parsing the tags.
+
 While parsing we consider the tags inside the <Ontology> tag or <owl:Ontology> tag, we have three cases for that 
 
 	1. <Ontology>
