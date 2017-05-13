@@ -55,6 +55,8 @@ While parsing we consider the tags inside the <Ontology> tag or <owl:Ontology> t
 
 
 
+						     Coding Period Started
+
 						   	DAY 4: 12:05.17 
 
 
@@ -62,5 +64,13 @@ While parsing we consider the tags inside the <Ontology> tag or <owl:Ontology> t
 
 2. Coded the project with all the functions from identifying the tags to storing the required information in pickle format.
 
+
+					
+							DAY 5: 13.05.17
+
+
+1. Added the third condition for <Ontology> children tags appearing inside <Annotation> tag as the abbreviatedIRI in <AnnotationProperty/> tag.
+
+2. We are handling a different case, the aim is to come up with a more elegant solution.
 
 
