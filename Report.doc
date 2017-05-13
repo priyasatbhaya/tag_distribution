@@ -73,4 +73,4 @@ While parsing we consider the tags inside the <Ontology> tag or <owl:Ontology> t
 
 2. We are handling a different case, the aim is to come up with a more elegant solution.
 
-
+3. Writing the build instructions and dependency list for the project in README.markdown 
