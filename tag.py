@@ -45,5 +45,8 @@ for filename in os.listdir('ontology_files'):
 #print(tags)
 #print(tagsFile)
 
-pickle.dump(tags,open("totalTags.p","wb"))
-pickle.dump(tagsFile,open("tagsFile.p","wb"))
+with open(os.path.join('pickle', 'totalTags.p'), 'wb') as f:
+    pickle.dump(tags, f)
+
+with open(os.path.join('pickle', 'tagsFile.p'), 'wb') as f:
+   pickle.dump(tagsFile, f)
