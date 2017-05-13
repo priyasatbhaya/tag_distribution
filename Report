@@ -55,3 +55,12 @@ While parsing we consider the tags inside the <Ontology> tag or <owl:Ontology> t
 
 
 
+						   	DAY 4: 12:05.17 
+
+
+1. The coding of the project started the first task was to scrap the tags for that will be using BeautifulSoup. 
+
+2. Coded the project with all the functions from identifying the tags to storing the required information in pickle format.
+
+
+
