@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import pickle
 import cPickle as pickle
 import os
-from xml.etree import ElementTree
 
 tags = {}
 tagsFile = {}
@@ -23,13 +22,16 @@ for filename in os.listdir('ontology_files'):
             tagList.append(child.name)
 
     else :
-        tree = ElementTree.parse(os.path.join('ontology_files', filename)).getroot()
-        for node in tree:
-            if(node.tag.find("Annotation")>0):
-                for n1 in node:
-                    if(n1.tag.find("AnnotationProperty")>0):
-                        tagList.append(n1.attrib['abbreviatedIRI'])
-
+    	node = tree.find('ontology')
+    	if (node):
+        	children = node.findChildren()
+        	for child in children:
+        		if(child.name=='annotation'):
+	        		grandchildren=child.findChildren();
+	        		if(grandchildren):
+	        			for greatgrandchildren in grandchildren:
+	        				if(greatgrandchildren.name=="annotationproperty"):
+	        					tagList.append(greatgrandchildren['abbreviatediri'])
 
     tagList = list(set(tagList))
       
@@ -42,8 +44,9 @@ for filename in os.listdir('ontology_files'):
             tags[tagElem]=tags[tagElem]+1
             tagsFile[tagElem].append(filename)
 
-#print(tags)
-#print(tagsFile)
+print(tags)
+print "\n"
+print(tagsFile)
 
 with open(os.path.join('pickle', 'totalTags.p'), 'wb') as f:
     pickle.dump(tags, f)

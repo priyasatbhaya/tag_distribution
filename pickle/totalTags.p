@@ -67,7 +67,7 @@ p23
 I1
 sS'rdfs:label'
 p24
-I3
+I2
 sS'rdfs:seeAlso'
 p25
 I1

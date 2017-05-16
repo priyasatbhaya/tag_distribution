@@ -121,7 +121,6 @@ asS'rdfs:label'
 p56
 (lp57
 g14
-ag19
 ag20
 asS'rdfs:seeAlso'
 p58
