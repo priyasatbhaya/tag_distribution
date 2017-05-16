@@ -99,6 +99,8 @@ Discussed the following points:
 
 2. Creating a new dictionary to store the total number of distinct tags appears in each ontology file.
 
+3. Sort the result with the most popular tags appearing in the front.
+
 
 
 
