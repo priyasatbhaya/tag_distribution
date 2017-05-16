@@ -16,5 +16,5 @@ sudo apt-get install python-lxml
 ## Run the Project
 ```
 cd tag_distribution
-python tags.py
+python tag.py
 ```
