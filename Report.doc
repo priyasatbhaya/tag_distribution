@@ -99,7 +99,25 @@ Discussed the following points:
 
 2. Creating a new dictionary to store the total number of distinct tags appears in each ontology file.
 
-3. Sort the result with the most popular tags appearing in the front.
+3. Sort the result with the most popular tags appearing in the front
+
+
+
+							DAY 9: 17.05.17
+
+
+1. Added a list of files with total number of tags present in each of them.
+
+2. Sorted the lists with most popular tags appearing in the front.
+
+3. Generating excel file ".xlsx" for the lists.
+
+
+
+							DAY 10: 18.05.17
+
+
+Enhanced the modularity of the code with each function used for performing a particular task, in order to make the code reusable and more readable.
 
 
 
