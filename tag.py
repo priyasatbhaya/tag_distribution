@@ -1,55 +1,95 @@
 from bs4 import BeautifulSoup
 import pickle
-import cPickle as pickle
 import os
+import operator
+import xlsxwriter
 
-tags = {}
-tagsFile = {}
+def generate_tables(filename,tagList,tags,files,tagsFile):
+	tagList = list(set(tagList))
+	files[filename]=len(tagList)
 
-for filename in os.listdir('ontology_files'):
-    infile = open(os.path.join('ontology_files', filename),"r")
-    contents = infile.read()
+	for tagElem in tagList:
+		if tagElem not in tags.keys() :
+			tags[tagElem]=1
+			tagsFile[tagElem]=[]
+			tagsFile[tagElem].append(filename)
+		else : 
+			tags[tagElem]=tags[tagElem]+1
+			tagsFile[tagElem].append(filename)
 
-    tagList = []
+def annotation_property(tree,tagList):
+	node = tree.find('ontology')
+	if (node):
+		children = node.findChildren()
+       	for child in children:
+       		if(child.name=='annotation'):
+	       		grandchildren=child.findChildren();
+	       		if(grandchildren):
+	       			for greatgrandchildren in grandchildren:
+	       				if(greatgrandchildren.name=="annotationproperty"):
+	      					tagList.append(greatgrandchildren['abbreviatediri'])
 
-    tree = BeautifulSoup(contents,'lxml')
-    node = tree.find('owl:ontology')
+def parsing(filename,tags,files,tagsFile):
+	infile = open(os.path.join('ontology_files', filename),"r")
+	contents = infile.read()
+	tagList = []
+	tree = BeautifulSoup(contents,'lxml')
+	node = tree.find('owl:ontology')
 
-    if(node):
-        children = node.findChildren()
+	if(node):
+	    children = node.findChildren()
+	    for child in children:
+			tagList.append(child.name)
+	else :
+		annotation_property(tree,tagList)
+		
+	generate_tables(filename,tagList,tags,files,tagsFile)
 
-        for child in children:
-            tagList.append(child.name)
+def xlsx_file(filename,listname):
+	workbook = xlsxwriter.Workbook(os.path.join('excel_files', filename))
+	worksheet = workbook.add_worksheet()
+	row=0
+	col=0
 
-    else :
-    	node = tree.find('ontology')
-    	if (node):
-        	children = node.findChildren()
-        	for child in children:
-        		if(child.name=='annotation'):
-	        		grandchildren=child.findChildren();
-	        		if(grandchildren):
-	        			for greatgrandchildren in grandchildren:
-	        				if(greatgrandchildren.name=="annotationproperty"):
-	        					tagList.append(greatgrandchildren['abbreviatediri'])
+	for i in range(0,len(listname)):
+	    row+=1
+	    worksheet.write(row, col, listname[i][0])
+	    worksheet.write(row, col+1,listname[i][1] )
 
-    tagList = list(set(tagList))
-      
-    for tagElem in tagList:
-        if tagElem not in tags.keys() :
-            tags[tagElem]=1
-            tagsFile[tagElem]=[]
-            tagsFile[tagElem].append(filename)
-        else : 
-            tags[tagElem]=tags[tagElem]+1
-            tagsFile[tagElem].append(filename)
+	workbook.close()
 
-print(tags)
-print "\n"
-print(tagsFile)
+def pickle_files(filename,listname):
+	with open(os.path.join('pickle', filename), 'wb') as f:
+	    pickle.dump(listname, f)
 
-with open(os.path.join('pickle', 'totalTags.p'), 'wb') as f:
-    pickle.dump(tags, f)
+def print_func(tags,files,tagsFile):
+	print '\n'+'Count of each tag'+'\n'
+	print tags 
+	print '\n'+'Tags present in respective files '+'\n'
+	print(tagsFile)
+	print '\n'+'Total tags in each file'+'\n'
+	print files
 
-with open(os.path.join('pickle', 'tagsFile.p'), 'wb') as f:
-   pickle.dump(tagsFile, f)
+def main():
+	tags = {}
+	tagsFile = {}
+	files={}
+
+	for filename in os.listdir('ontology_files'):
+	    parsing(filename,tags,files,tagsFile)
+
+	tags=sorted(tags.items(), key=operator.itemgetter(1),reverse=True)
+	files=sorted(files.items(), key=operator.itemgetter(1),reverse=True)
+
+	xlsx_file('tags.xlsx',tags)
+	xlsx_file('files.xlsx',files)
+
+
+	pickle_files('tags.p',tags)
+	pickle_files('tagsFile.p',tagsFile)
+	pickle_files('files.p',files)
+
+	print_func(tags,files,tagsFile)
+
+if __name__=='__main__':
+	main()
