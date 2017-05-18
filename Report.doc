@@ -117,7 +117,9 @@ Discussed the following points:
 							DAY 10: 18.05.17
 
 
-Enhanced the modularity of the code with each function used for performing a particular task, in order to make the code reusable and more readable.
+1. Introduced additional checks for children tags. 
+
+2. Enhanced the modularity of the code with each function used for performing a particular task, in order to make the code reusable and more readable.
 
 
 
