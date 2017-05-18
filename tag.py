@@ -21,13 +21,14 @@ def annotation_property(tree,tagList):
 	node = tree.find('ontology')
 	if (node):
 		children = node.findChildren()
-       	for child in children:
-       		if(child.name=='annotation'):
-	       		grandchildren=child.findChildren();
-	       		if(grandchildren):
-	       			for greatgrandchildren in grandchildren:
-	       				if(greatgrandchildren.name=="annotationproperty"):
-	      					tagList.append(greatgrandchildren['abbreviatediri'])
+		if (children):
+			for child in children:
+				if(child.name=='annotation'):
+					grandchildren=child.findChildren();
+					if(grandchildren):
+						for greatgrandchildren in grandchildren:
+							if(greatgrandchildren.name=="annotationproperty"):
+								tagList.append(greatgrandchildren['abbreviatediri'])
 
 def parsing(filename,tags,files,tagsFile):
 	infile = open(os.path.join('ontology_files', filename),"r")
