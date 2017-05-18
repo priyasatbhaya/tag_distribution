@@ -24,7 +24,7 @@ def annotation_property(tree,tagList):
 		if (children):
 			for child in children:
 				if(child.name=='annotation'):
-					grandchildren=child.findChildren();
+					grandchildren=child.findChildren()
 					if(grandchildren):
 						for greatgrandchildren in grandchildren:
 							if(greatgrandchildren.name=="annotationproperty"):
