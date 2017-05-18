@@ -116,11 +116,66 @@ Discussed the following points:
 
 							DAY 10: 18.05.17
 
+							  (Meeting)
+
 
 1. Introduced additional checks for children tags. 
 
 2. Enhanced the modularity of the code with each function used for performing a particular task, in order to make the code reusable and more readable.
 
+Discussed the following points:
 
+1.Semi-automate the download of the .owl and .rdf files from a list of registries
+
+2.We will have a different directory for each registry, then we merge all the ontologies in one directory then we create another directory containing only the unique ontologies, for that we use a script to identify each ontology based on the base URI.
+
+
+
+							DAY 11: 19.05.17
+
+List of Registries:
+
+	Colore (https://code.google.com/p/colore/source/browse/trunk/ontologies/approximate_point) 
+	DAML (http://www.daml.org/ontologies/) 
+	DERI (http://vocab.deri.ie/) 
+	LOV (http://lov.okfn.org/dataset/lov) 
+	OBO Foundry (http://www.obofoundry.org/) 
+	Maven (http://mvnrepository.com/artifact/edu.stanford.protege) 
+	MISO (http://www.sequenceontology.org/) 
+	MMI (http://mmisw.org/) 
+	ONKI (http://onki.fi/en/browser/) 
+	Ontohub (https://ontohub.org/ontologies) 
+	ROMULUS  (http://www.thezfiles.co.za/ROMULUS/) 
+	Schemapedia (http://datahub.io/dataset/schemapedia) 
+	SHOE (http://www.cs.umd.edu/projects/plus/SHOE/onts/) 
+	OOR Open Ontology Repository (http://sandbox.oor.net/ontologies) 
+	OntoSelect (http://olp.dfki.de/ontoselect/) 
+	Protege_Ontology_Library (https://protegewiki.stanford.edu/wiki/Protege_Ontology_Library) 
+
+Some Registries whose ontology we already have:
+
+
+	Bio-Portal (https://bioportal.bioontology.org/) 
+	AgroPortal (http://agroportal.lirmm.fr/ontologies) 
+
+
+1. The first task was to find a tool to download all the ontologies in a registry for that we will be using FoxySpider it is a firefox extension.
+
+	The following registries are already completed:
+
+		DERI (http://vocab.deri.ie/) 
+		LOV (http://lov.okfn.org/dataset/lov) 
+		OBO Foundry (http://www.obofoundry.org/) 
+		MISO (http://www.sequenceontology.org/) 
+
+	There are some issues with the following:
+
+		1. I am not able to find ontologies to be downloaded for the following sites Colore (https://code.google.com/p/colore/source/browse 			/trunk/ontologies/approximate_point) 
+
+		2.The following registries not working:
+			DAML (http://www.daml.org/ontologies/) 
+			Maven (http://mvnrepository.com/artifact/edu.stanford.protege) 
+
+		3.MMI (http://mmisw.org/) contains URI so it's not getting captured by the FoxySpider
 
 
