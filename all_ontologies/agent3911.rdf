@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/">
+
+  <foaf:Person rdf:about="http://libver.math.auth.gr/resource/agent3911">
+    <rdfs:label>Νίκος Καζαντζάκης</rdfs:label>
+    <foaf:name>Νίκος Καζαντζάκης</foaf:name>
+    <dc11:date>(1883-1957)</dc11:date>
+    <foaf:givenName>Νίκος</foaf:givenName>
+    <foaf:surname>Καζαντζάκης</foaf:surname>
+  </foaf:Person>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_1262">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_13">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_22294">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_28">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_32429">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_32437">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_32440">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_32451">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_32873">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_3517">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_36424">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_3958">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_49889">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_51224">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_52959">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_52978">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_52982">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_54616">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_64">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_7760">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_7866">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_7893">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_7928">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_8131">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_9008">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_9453">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_23520">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_61655">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_62509">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://libver.math.auth.gr/resource/record1_64662">
+    <dc11:contributor rdf:resource="http://libver.math.auth.gr/resource/agent3911"/>
+  </rdf:Description>
+
+</rdf:RDF>

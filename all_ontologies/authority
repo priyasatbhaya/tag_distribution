@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:omv="http://omv.ontoware.org/2005/05/ontology#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:omvmmi="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/"
+    xmlns="http://mmisw.org/ont/mmi/authority/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://mmisw.org/ont/mmi/authority">
+    <owl:Ontology rdf:about="">
+        <omv:version>20120612T213047</omv:version>
+        <omvmmi:contactRole>content manager</omvmmi:contactRole>
+        <omvmmi:origMaintainerCode>mmi</omvmmi:origMaintainerCode>
+        <omvmmi:hasContentCreator>MMI</omvmmi:hasContentCreator>
+        <omvmmi:shortNameUri>http://mmisw.org/ont/mmi/resourcetype/Authority</omvmmi:shortNameUri>
+        <omv:hasContributor>John Graybeal, Carlos Rueda.</omv:hasContributor>
+        <dc:date>2012-06-12T21:30:47+0000</dc:date>
+        <omvmmi:hasResourceType>Authority</omvmmi:hasResourceType>
+        <omv:uri>http://mmisw.org/ont/mmi/authority</omv:uri>
+        <omv:description>List of authorities for the ontologies registered in the MMI Ontology Repository</omv:description>
+        <dc:description>List of authorities for the ontologies registered in the MMI Ontology Repository</dc:description>
+        <dc:contributor>John Graybeal, Carlos Rueda.</dc:contributor>
+        <omv:name>Authority Vocabulary</omv:name>
+        <omv:acronym>authority</omv:acronym>
+        <dc:creator>MMI</dc:creator>
+        <omvmmi:creditRequired>not specified</omvmmi:creditRequired>
+        <omvmmi:contact>MMI</omvmmi:contact>
+        <omv:creationDate>2017-05-19T10:15:18+0000</omv:creationDate>
+        <omv:usedOntologyEngineeringTool rdf:resource="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/voc2rdf"/>
+        <omv:hasCreator>MMI</omv:hasCreator>
+    </owl:Ontology>
+    <owl:Class rdf:about="http://mmisw.org/ont/mmi/authority/Authority">
+        <rdfs:label>Authority</rdfs:label>
+    </owl:Class>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/authority/organization_url">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/authority/Authority"/>
+        <rdfs:label>organization_url</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/authority/description">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/authority/Authority"/>
+        <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/authority/abbreviation">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/authority/Authority"/>
+        <rdfs:label>abbreviation</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/mmi/authority/name">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/mmi/authority/Authority"/>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/argo">
+        <organization_url>http://www-argo.ucsd.edu/</organization_url>
+        <description>Community vocabularies for project</description>
+        <name>Argo profiling floats project</name>
+        <abbreviation>argo</abbreviation>
+        <rdfs:label>argo</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/ndbc">
+        <organization_url>http://www.ndbc.noaa.gov/</organization_url>
+        <name>National Data Buoy Center</name>
+        <abbreviation>ndbc</abbreviation>
+        <rdfs:label>ndbc</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/woce">
+        <organization_url>http://www.noc.soton.ac.uk/OTHERS/woceipo/ipo.html</organization_url>
+        <name>World Ocean Circulation Experiment</name>
+        <abbreviation>woce</abbreviation>
+        <rdfs:label>woce</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/cdip">
+        <organization_url>http://cdip.ucsd.edu/</organization_url>
+        <name>Coastal Data Information Program</name>
+        <abbreviation>cdip</abbreviation>
+        <rdfs:label>cdip</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/macoora">
+        <organization_url>http://www.macoora.org/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Mid-Atlantic Coastal Ocean Observing Regional Association</name>
+        <abbreviation>macoora</abbreviation>
+        <rdfs:label>macoora</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/seacoos">
+        <organization_url>http://www.seacoos.orgn</organization_url>
+        <name>SouthEast U.S. Atlantic Coastal Ocean Observing System</name>
+        <abbreviation>seacoos</abbreviation>
+        <rdfs:label>seacoos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/glos">
+        <organization_url>http://glos.us/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Great Lakes Observing System</name>
+        <abbreviation>glos</abbreviation>
+        <rdfs:label>glos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/wod">
+        <organization_url>http://www.nodc.noaa.gov/OC5/WOD05/pr_wod05.html</organization_url>
+        <description>Project of World Data Center system and U.S. National Oceanographic Data Center</description>
+        <name>World Ocean Database</name>
+        <abbreviation>wod</abbreviation>
+        <rdfs:label>wod</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/cencoos">
+        <organization_url>http://www.cencoos.org/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Central &amp; Northern California Ocean Observing System</name>
+        <abbreviation>cencoos</abbreviation>
+        <rdfs:label>cencoos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/seadatanet">
+        <organization_url>http://www.seadatanet.org/</organization_url>
+        <name>SeaDataNet Project</name>
+        <abbreviation>seadatanet</abbreviation>
+        <rdfs:label>seadatanet</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/unidata">
+        <organization_url>http://www.unidata.ucar.edu</organization_url>
+        <name>Unidata</name>
+        <abbreviation>unidata</abbreviation>
+        <rdfs:label>unidata</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/bodc">
+        <organization_url>http://www.bodc.ac.uk</organization_url>
+        <name>British Oceanographic Data Centre</name>
+        <abbreviation>bodc</abbreviation>
+        <rdfs:label>bodc</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/gcoos">
+        <organization_url>http://gcoos.tamu.edu/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Gulf of Mexico Coastal Ocean Observing System</name>
+        <abbreviation>gcoos</abbreviation>
+        <rdfs:label>gcoos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/mmitest">
+        <organization_url>http://marinemetadata.org</organization_url>
+        <description>Service testing ontologies by MMI (deleted often)</description>
+        <name>Marine Metadata Interoperability Project</name>
+        <abbreviation>mmitest</abbreviation>
+        <rdfs:label>mmitest</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/ogc">
+        <organization_url>http://www.opengeospatial.org</organization_url>
+        <name>Open Geospatial Consortium</name>
+        <abbreviation>ogc</abbreviation>
+        <rdfs:label>ogc</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/q2o">
+        <organization_url>http://q2o.whoi.edu</organization_url>
+        <name>QARTOD-to-OGC Project</name>
+        <abbreviation>q2o</abbreviation>
+        <rdfs:label>q2o</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/testing">
+        <description>Service testing ontologies by anyone (deleted often without notice)</description>
+        <name>Marine Metadata Interoperability Project</name>
+        <abbreviation>testing</abbreviation>
+        <rdfs:label>testing</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/mmi">
+        <organization_url>http://marinemetadata.org</organization_url>
+        <description>MMI-managed vocabularies</description>
+        <name>Marine Metadata Interoperability Project</name>
+        <abbreviation>mmi</abbreviation>
+        <rdfs:label>mmi</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/gcmd">
+        <organization_url>http://gcmd.nasa.gov</organization_url>
+        <name>Global Change Master Directory</name>
+        <abbreviation>gcmd</abbreviation>
+        <rdfs:label>gcmd</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/neracoos">
+        <organization_url>http://www.neracoos.org/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Northeastern Regional Association of Coastal Ocean Observing Systems</name>
+        <abbreviation>neracoos</abbreviation>
+        <rdfs:label>neracoos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/wmo">
+        <organization_url>http://www.wmo.int</organization_url>
+        <name>World Meteorological Association</name>
+        <abbreviation>wmo</abbreviation>
+        <rdfs:label>wmo</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/sccoos">
+        <organization_url>http://www.sccoos.org/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Southern California Coastal Ocean Observing System</name>
+        <abbreviation>sccoos</abbreviation>
+        <rdfs:label>sccoos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/ioos">
+        <organization_url>http://www.ioos.gov/</organization_url>
+        <description>IOOS Vocabulary, Core Variables, and other vocabularies</description>
+        <name>Integrated Ocean Observing System</name>
+        <abbreviation>ioos</abbreviation>
+        <rdfs:label>ioos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/cf">
+        <organization_url>http://cf-pcmdi.llnl.gov</organization_url>
+        <description>CF standard names and other vocabularies</description>
+        <name>NetCDF Climate and Forecast Conventions</name>
+        <abbreviation>cf</abbreviation>
+        <rdfs:label>cf</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/agu">
+        <organization_url>http://www.agu.org</organization_url>
+        <description>AGU list of terms</description>
+        <name>American Geophysical Union</name>
+        <abbreviation>agu</abbreviation>
+        <rdfs:label>agu</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/mbari">
+        <organization_url>http://www.mbari.org</organization_url>
+        <name>Monterey Bay Aquarium Research Institute</name>
+        <abbreviation>mbari</abbreviation>
+        <rdfs:label>mbari</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/mvco">
+        <organization_url>http://www.whoi.edu/mvco</organization_url>
+        <name>Martha's Vineyard Coastal Observatory</name>
+        <abbreviation>mvco</abbreviation>
+        <rdfs:label>mvco</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/nanoos">
+        <organization_url>http://www.nanoos.org/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Northwest Association of Networked Ocean Observing Systems</name>
+        <abbreviation>nanoos</abbreviation>
+        <rdfs:label>nanoos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/pacioos">
+        <organization_url>http://www.soest.hawaii.edu/pacioos/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Pacific Islands Ocean Observing System</name>
+        <abbreviation>pacioos</abbreviation>
+        <rdfs:label>pacioos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/asfa">
+        <organization_url>http://www.fao.org/fishery/asfa</organization_url>
+        <description>ASFA Thesaurus</description>
+        <name>Aquatic Sciences &amp; Fisheries Abstracts</name>
+        <abbreviation>asfa</abbreviation>
+        <rdfs:label>asfa</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/iso">
+        <organization_url>http://www.iso.org</organization_url>
+        <name>International Organization for Standardization</name>
+        <abbreviation>iso</abbreviation>
+        <rdfs:label>iso</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/qartod">
+        <organization_url>http://nautilus.baruch.sc.edu/twiki/bin/view</organization_url>
+        <name>Quality Assurance for Real-Time Oceanographic Data</name>
+        <abbreviation>qartod</abbreviation>
+        <rdfs:label>qartod</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/aoos">
+        <organization_url>http://www.aoos.org/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Alaska Ocean Observing System</name>
+        <abbreviation>aoos</abbreviation>
+        <rdfs:label>aoos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/jcomm">
+        <organization_url>http://www.jcomm.info</organization_url>
+        <description>includes WMO+IOC+IGOSS</description>
+        <name>Joint WMO-IOC Technical Commission for Oceanography and Marine Meteorology</name>
+        <abbreviation>jcomm</abbreviation>
+        <rdfs:label>jcomm</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/cara">
+        <organization_url>http://cara.uprm.edu/federation.html</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Caribbean Regional Association</name>
+        <abbreviation>cara</abbreviation>
+        <rdfs:label>cara</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/mmidev">
+        <organization_url>http://marinemetadata.org/community/teams/ont</organization_url>
+        <description>MMI developmental vocabularies</description>
+        <name>Marine Metadata Interoperability Project</name>
+        <abbreviation>mmidev</abbreviation>
+        <rdfs:label>mmidev</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/mbarissds">
+        <organization_url>http://www.mbari.org/ssds</organization_url>
+        <description>data management with rich metadata</description>
+        <name>MBARI Shore Side Data System</name>
+        <abbreviation>mbarissds</abbreviation>
+        <rdfs:label>mbarissds</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/ird">
+        <organization_url>http://www.ird.fr</organization_url>
+        <name>L'institut de recherche pour le d?veloppemet</name>
+        <abbreviation>ird</abbreviation>
+        <rdfs:label>ird</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/pacoos">
+        <organization_url>http://www.pacoos.org</organization_url>
+        <name>Pacific Coast Ocean Observing System</name>
+        <abbreviation>pacoos</abbreviation>
+        <rdfs:label>pacoos</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/secoora">
+        <organization_url>http://www.secoora.org/</organization_url>
+        <description>IOOS Regional Association</description>
+        <name>Southeast Coastal Ocean Observing Regional Association</name>
+        <abbreviation>secoora</abbreviation>
+        <rdfs:label>secoora</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/oi2008demo">
+        <organization_url>http://www.oceaninnovation.ca</organization_url>
+        <description>vocabularies for demonstrations</description>
+        <name>Oceans Innovations 2008 Demonstration</name>
+        <abbreviation>oi2008demo</abbreviation>
+        <rdfs:label>oi2008demo</rdfs:label>
+    </Authority>
+    <Authority rdf:about="http://mmisw.org/ont/mmi/authority/mmidup">
+        <organization_url>http://marinemetadata.org/community/teams/ont</organization_url>
+        <description>MMI republished (duplicated) ontologies</description>
+        <name>Marine Metadata Interoperability Project</name>
+        <abbreviation>mmidup</abbreviation>
+        <rdfs:label>mmidup</rdfs:label>
+    </Authority>
+</rdf:RDF>
