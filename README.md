@@ -18,5 +18,12 @@ sudo easy_install XlsxWriter
 ## Run the Project
 ```
 cd tag_distribution
+```
+Copy the ontology files '.owl|.rdf' in the 'all_ontologies' directory and run the scripts as follows
+```
+python unique_ontologies.py
 python tag.py
 ```
+
+## Result
+The result is stored in pickles and excel_files directories. 
