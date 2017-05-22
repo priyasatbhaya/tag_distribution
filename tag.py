@@ -31,7 +31,7 @@ def annotation_property(tree,tagList):
 								tagList.append(greatgrandchildren['abbreviatediri'])
 
 def parsing(filename,tags,files,tagsFile):
-	infile = open(os.path.join('ontology_files', filename),"r")
+	infile = open(os.path.join('ontology_set', filename),"r")
 	contents = infile.read()
 	tagList = []
 	tree = BeautifulSoup(contents,'lxml')
@@ -76,7 +76,7 @@ def main():
 	tagsFile = {}
 	files={}
 
-	for filename in os.listdir('ontology_files'):
+	for filename in os.listdir('ontology_set'):
 	    parsing(filename,tags,files,tagsFile)
 
 	tags=sorted(tags.items(), key=operator.itemgetter(1),reverse=True)
