@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:omv="http://omv.ontoware.org/2005/05/ontology#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:omvmmi="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/"
+    xmlns="http://mmisw.org/ont/odm2/ActionType/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://mmisw.org/ont/odm2/ActionType">
+    <owl:Ontology rdf:about="">
+        <omv:keywords>ODM2, type vocabulary, actions</omv:keywords>
+        <omv:hasCreator>Emilio Mayorga</omv:hasCreator>
+        <omv:reference>Horsburgh et al. In preparation. ODM2 Controlled Vocabularies.</omv:reference>
+        <dc:description>ODM2 ActionTypeCV vocabulary repository</dc:description>
+        <omvmmi:origMaintainerCode>odm2</omvmmi:origMaintainerCode>
+        <omv:description>ODM2 ActionTypeCV vocabulary repository</omv:description>
+        <omv:hasContributor>Jeffery Horsburgh, Anthony Audfdenkampe, Kerstin Lehnert, Ilya Zaslavski, et al</omv:hasContributor>
+        <omv:documentation>https://github.com/UCHIC/ODM2/blob/master/doc/ODM2Docs/core_actions.md</omv:documentation>
+        <dc:creator>Emilio Mayorga</dc:creator>
+        <omv:name>ODM2 ActionTypeCV vocabulary</omv:name>
+        <omv:usedOntologyEngineeringTool rdf:resource="http://mmisw.org/ont/mmi/20081020/ontologyMetadata/voc2rdf"/>
+        <omv:creationDate>2017-05-19T10:12:51+0000</omv:creationDate>
+        <omvmmi:hasResourceType>general</omvmmi:hasResourceType>
+        <omvmmi:shortNameUri>http://mmisw.org/ont/mmi/topicTheme/general</omvmmi:shortNameUri>
+        <omvmmi:hasContentCreator>Emilio Mayorga</omvmmi:hasContentCreator>
+        <omv:uri>http://mmisw.org/ont/odm2/ActionType</omv:uri>
+        <omvmmi:contact>Emilio Mayorga</omvmmi:contact>
+        <dc:contributor>Jeffery Horsburgh, Anthony Audfdenkampe, Kerstin Lehnert, Ilya Zaslavski, et al</dc:contributor>
+        <omvmmi:temporaryMmiRole>content manager</omvmmi:temporaryMmiRole>
+        <omvmmi:creditRequired>not specified</omvmmi:creditRequired>
+        <omv:acronym>ActionType</omv:acronym>
+        <omvmmi:creditCitation>ODM2 Vocabulary, 2014</omvmmi:creditCitation>
+        <dc:date>2014-11-07T23:53:23+0000</dc:date>
+        <omv:version>20141107T235323</omv:version>
+    </owl:Ontology>
+    <owl:Class rdf:about="http://mmisw.org/ont/odm2/ActionType/CvType">
+        <rdfs:label>CvType</rdfs:label>
+    </owl:Class>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/odm2/ActionType/note">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/odm2/ActionType/CvType"/>
+        <rdfs:label>note</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/odm2/ActionType/provenanceUri">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/odm2/ActionType/CvType"/>
+        <rdfs:label>provenanceUri</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/odm2/ActionType/provenance">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/odm2/ActionType/CvType"/>
+        <rdfs:label>provenance</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/odm2/ActionType/category">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/odm2/ActionType/CvType"/>
+        <rdfs:label>category</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/odm2/ActionType/producesResult">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/odm2/ActionType/CvType"/>
+        <rdfs:label>producesResult</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/odm2/ActionType/definition">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/odm2/ActionType/CvType"/>
+        <rdfs:label>definition</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/odm2/ActionType/name">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/odm2/ActionType/CvType"/>
+        <rdfs:label>name</rdfs:label>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/odm2/ActionType/term">
+        <rdfs:domain rdf:resource="http://mmisw.org/ont/odm2/ActionType/CvType"/>
+        <rdfs:label>term</rdfs:label>
+    </owl:DatatypeProperty>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/InstrumentCalibration">
+        <producesResult>No</producesResult>
+        <category>Equipment</category>
+        <definition>The act of calibrating an instrument either in the field or in a laboratory. The instrument may be an in situ field sensor or a laboratory instrument.  An instrument is the subclass of equipment that is capable of making an observation to produce a result.</definition>
+        <name>Instrument calibration</name>
+        <term>InstrumentCalibration</term>
+        <rdfs:label>InstrumentCalibration</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/Expedition">
+        <producesResult>No</producesResult>
+        <note>Parent to site visit actions and other actions</note>
+        <category>FieldActivity</category>
+        <definition>A field visit action in which many sites are visited over a continguous period of time, often involving serveral investigators, and typically having a specific purpose.  Expedition actions are typically parents to other related Actions.</definition>
+        <name>Expedition</name>
+        <term>Expedition</term>
+        <rdfs:label>Expedition</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/GenericNonObservation">
+        <producesResult>No</producesResult>
+        <note>Use this action type for actions that are of unkown type or otherwise can not be classified as any of the existing action types.</note>
+        <category>Other</category>
+        <definition>A generic, non-specific action type that does not produce a result.</definition>
+        <name>Generic non-observation</name>
+        <term>GenericNonObservation</term>
+        <rdfs:label>GenericNonObservation</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/SpecimenFractionation">
+        <producesResult>No</producesResult>
+        <category>SamplingFeature</category>
+        <definition>The process of separating a specimen into multiple different fractions or size classes.</definition>
+        <name>Specimen fractionation</name>
+        <term>SpecimenFractionation</term>
+        <rdfs:label>SpecimenFractionation</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/EquipmentMaintenance">
+        <producesResult>No</producesResult>
+        <category>Equipment</category>
+        <definition>The act of performing regular or periodic upkeep or servicing of field or laboratory equipment. Maintenance may be performed in the field, in a laboratory, or at a factory maintenance center.</definition>
+        <name>Equipment maintenance</name>
+        <term>EquipmentMaintenance</term>
+        <rdfs:label>EquipmentMaintenance</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/EquipmentProgramming">
+        <producesResult>No</producesResult>
+        <category>Equipment</category>
+        <definition>The act of creating or modifying the data collection program running on a datalogger or other equipment deployed at a monitoring site.</definition>
+        <name>Equipment programming</name>
+        <term>EquipmentProgramming</term>
+        <rdfs:label>EquipmentProgramming</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/Cruise">
+        <producesResult>No</producesResult>
+        <note>Parent to site visit actions and other actions</note>
+        <category>FieldActivity</category>
+        <definition>A specialized form of an expedition action that involves an ocean-going vessel. Cruise actions are typically parents to other related Actions.</definition>
+        <name>Cruise</name>
+        <term>Cruise</term>
+        <rdfs:label>Cruise</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/InstrumentDeployment">
+        <producesResult>Yes</producesResult>
+        <note>A specific form of the Observation actions category of actions, which is the only category of actions that can produce observation results. This term should be used to describe an action that creates an observation result from deployment of an in situ sensor or instrument.</note>
+        <category>Observation</category>
+        <definition>The act of deploying an in situ instrument or sensor that creates an observation result.  This term is a specific form of the Observation actions category of actions, which is the only category of actions that can produce observation results.</definition>
+        <name>Instrument deployment</name>
+        <term>InstrumentDeployment</term>
+        <rdfs:label>InstrumentDeployment</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/FieldActivity">
+        <producesResult>No</producesResult>
+        <category>FieldActivity</category>
+        <definition>A generic, non-specific action type performed in the field at or on a sampling feature.</definition>
+        <name>Field activity</name>
+        <term>FieldActivity</term>
+        <rdfs:label>FieldActivity</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/Observation">
+        <producesResult>Yes</producesResult>
+        <note>The general form of the Observation actions category of actions, which is the only category of actions that can produce observation results. This term should be used in cases where the Result does not come from an instrument deployment or specimen analysis, or where information about the instrument deployment or speciment analysis is unknown.</note>
+        <provenance>Open Geospatial Consortium Observations &amp; Measurements</provenance>
+        <category>Observation</category>
+        <definition>The general act of making an observation. This term should be used when a Result is generated but the more specific terms of Instrument deployment or Specimen analysis are not applicable.</definition>
+        <name>Observation</name>
+        <term>Observation</term>
+        <rdfs:label>Observation</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/SpecimenPreservation">
+        <producesResult>No</producesResult>
+        <category>SamplingFeature</category>
+        <definition>The act of preserving a specimen collected in the field to produce a sample suitable for analysis using a particular analytical procedure.</definition>
+        <name>Specimen preservation</name>
+        <term>SpecimenPreservation</term>
+        <rdfs:label>SpecimenPreservation</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/Estimation">
+        <producesResult>Yes</producesResult>
+        <category>Observation</category>
+        <definition>The act of creating results by estimation or professional judgement.</definition>
+        <name>Estimation</name>
+        <term>Estimation</term>
+        <rdfs:label>Estimation</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/InstrumentRetrieval">
+        <producesResult>No</producesResult>
+        <category>Equipment</category>
+        <definition>The act of recovering an in situ instrument (which made observations) from a sampling feature. This action ends an instrument deployment action.</definition>
+        <name>Instrument retrieval</name>
+        <term>InstrumentRetrieval</term>
+        <rdfs:label>InstrumentRetrieval</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/SpecimenAnalysis">
+        <producesResult>Yes</producesResult>
+        <note>A specific form of the Observation actions category of actions, which is the only category of actions that can produce observation results. This term should be used to describe an action that creates an observation result from ex situ analysis of a specimen.</note>
+        <category>Observation</category>
+        <definition>The analysis of a specimen ex situ using an instrument, typically in a laboratory, for the purpose of measuring properties of that specimen.</definition>
+        <name>Specimen analysis</name>
+        <term>SpecimenAnalysis</term>
+        <rdfs:label>SpecimenAnalysis</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/SiteVisit">
+        <producesResult>No</producesResult>
+        <note>Parent to other actions</note>
+        <category>FieldActivity</category>
+        <definition>A field visit action in which a single site is visited for one or more other possible actions (i.e., specimen collection, equipment maintenance, etc.).  Site visit actions are typically parents to other related actions.</definition>
+        <name>Site visit</name>
+        <term>SiteVisit</term>
+        <rdfs:label>SiteVisit</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/EquipmentRetrieval">
+        <producesResult>No</producesResult>
+        <category>Equipment</category>
+        <definition>The act of recovering a piece of equipment that made no observations from a deployment at a sampling feature or other location. For instruments, the more specific term Instrument retrieval should be used.</definition>
+        <name>Equipment retrieval</name>
+        <term>EquipmentRetrieval</term>
+        <rdfs:label>EquipmentRetrieval</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/Simulation">
+        <producesResult>Yes</producesResult>
+        <category>Observation</category>
+        <definition>The act of calculating results through the use of a simulation model.</definition>
+        <name>Simulation</name>
+        <term>Simulation</term>
+        <rdfs:label>Simulation</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/SpecimenPreparation">
+        <producesResult>No</producesResult>
+        <category>SamplingFeature</category>
+        <definition>The processing of a specimen collected in the field to produce a sample suitable for analysis using a particular analytical procedure.</definition>
+        <name>Specimen preparation</name>
+        <term>SpecimenPreparation</term>
+        <rdfs:label>SpecimenPreparation</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/SubmersibleLaunch">
+        <producesResult>No</producesResult>
+        <category>FieldActivity</category>
+        <definition>The act of deploying a submersible from a vessel or ship.</definition>
+        <name>Submersible launch</name>
+        <term>SubmersibleLaunch</term>
+        <rdfs:label>SubmersibleLaunch</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/Derivation">
+        <producesResult>Yes</producesResult>
+        <category>Observation</category>
+        <definition>The act of creating results by deriving them from other results.</definition>
+        <name>Derivation</name>
+        <term>Derivation</term>
+        <rdfs:label>Derivation</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/DataRetrieval">
+        <producesResult>No</producesResult>
+        <category>Equipment</category>
+        <definition>The act of retrieving data from a datalogger deployed at a monitoring site.</definition>
+        <name>Data retrieval</name>
+        <term>DataRetrieval</term>
+        <rdfs:label>DataRetrieval</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/SpecimenCollection">
+        <producesResult>No</producesResult>
+        <category>SamplingFeature</category>
+        <definition>The collection of a specimen in the field.</definition>
+        <name>Specimen collection</name>
+        <term>SpecimenCollection</term>
+        <rdfs:label>SpecimenCollection</rdfs:label>
+    </CvType>
+    <CvType rdf:about="http://mmisw.org/ont/odm2/ActionType/EquipmentDeployment">
+        <producesResult>No</producesResult>
+        <category>Equipment</category>
+        <definition>The act of placing equipment that will not make observations at or within a sampling feature. Actions involving the deployment of instruments should use the more specific term Instrument deployment.</definition>
+        <name>Equipment deployment</name>
+        <term>EquipmentDeployment</term>
+        <rdfs:label>EquipmentDeployment</rdfs:label>
+    </CvType>
+</rdf:RDF>
