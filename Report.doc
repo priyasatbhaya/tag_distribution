@@ -228,11 +228,11 @@ The following things have been completed:
 
 4. Now we have some new folders and files:
         
-         unique: contains all the unique ontologies
+         ontology_set: contains all the unique ontologies from which 'tag.py' reads files
         
-         all: all the ontologies we want to compute result from
+         all_ontologies: all the ontologies we want to compute result from
          
-         ontologies: the folder wise stored ontologies from each registry 
+         registries: the folder wise stored ontologies from each registry 
          
          unique_ontologies.py : the sript which generates the 'file_dict', the dictionary which stores the unique ontology file names and also      					stores the unique ontology files in the 'unique' folder
 
