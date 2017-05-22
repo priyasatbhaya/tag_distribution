@@ -178,4 +178,78 @@ Some Registries whose ontology we already have:
 
 		3.MMI (http://mmisw.org/) contains URI so it's not getting captured by the FoxySpider
 
+								
+
+							DAY 12: 20.05.17
+
+
+
+There were some issues with some of the registries, but some could be resolved and they are:
+
+	Protege_Ontology_Library (https://protegewiki.stanford.edu/wiki/Protege_Ontology_Library)
+        
+	ROMULUS  (http://www.thezfiles.co.za/ROMULUS/) 
+
+        Schemapedia (http://datahub.io/dataset/schemapedia)  
+
+        MMI (http://mmisw.org/)  Used 'wget' for this as it was list of URI's and LinkGraber to grab all the links on that page
+
+But we stil have the following issues with the rest of the registries:
+
+	1.The following registries are not working:
+		DAML (http://www.daml.org/ontologies/) 
+		Maven (http://mvnrepository.com/artifact/edu.stanford.protege) 
+                OntoSelect (http://olp.dfki.de/ontoselect/) service unavailable
+                OOR Open Ontology Repository (http://sandbox.oor.net/ontologies) 
+
+	2. I am not able to find ontologies to be downloaded for the following sites
+                    Colore (https://code.google.com/p/colore/source/browse/trunk/ontologies/approximate_point)                      
+                    SHOE (http://www.cs.umd.edu/projects/plus/SHOE/onts/) 
+                    ONKI (http://onki.fi/en/browser/) 
+
+        3. Can't automate the download from here some license problem
+               Ontohub (https://ontohub.org/ontologies)  
+																		
+
+
+
+							DAY 13: 21.05.17 (Sunday)
+
+							DAY 14: 22.05.17
+
+
+The following things have been completed:
+
+1. We have now 594 total ontologies extracted from the given registries.
+
+2. A folder is created containing unique ontologies and we generate results on basis of the unique ontologies differentiated on the basis of its URI
+
+3. We are storing all the unique files in a dictionary 'file_dict' with URI as the keys and respective filename as its value, stored in pickle format under the pickle folder
+
+4. Now we have some new folders and files:
+        
+         unique: contains all the unique ontologies
+        
+         all: all the ontologies we want to compute result from
+         
+         ontologies: the folder wise stored ontologies from each registry 
+         
+         unique_ontologies.py : the sript which generates the 'file_dict', the dictionary which stores the unique ontology file names and also      					stores the unique ontology files in the 'unique' folder
+
+5. In 'unique_ontologies.py' we are using 'shutil' to copy the files.
+
+
+
+							DAY 15: 23.05.17
+
+
+
+We are testing 'unique_ontologies.py' script for a large number of files, the observations are as follows:
+
+1. It is almost consuming 7.7 GB RAM at some point to build the 'file_dict' and to copy the files to 'unique' folder.
+
+2. Consuming more than two hours for 657 MB data for total 594 ontology files. 
+
+3. Unfortunately not able to get the results as the data set is huge, so will start off with a small number of files.
+
 
