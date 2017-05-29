@@ -3,22 +3,33 @@ import pickle
 import os
 import shutil
 
+file_from ='all_ontologies'
+file_to = 'ontology_set'
+
 def copy_files(file_dict):
 	for key in file_dict.keys():
-		shutil.copy2(os.path.join('all_ontologies', file_dict[key]), os.path.join('ontology_set', file_dict[key]))
+		shutil.copy2(os.path.join(file_from, file_dict[key]), os.path.join(file_to, file_dict[key]))
 
 def parsing(filename,file_dict):
-	infile = open(os.path.join('all_ontologies', filename),"r")
+	
+	infile = open(os.path.join(file_from, filename),"r")
 	contents = infile.read()
 	tree = BeautifulSoup(contents,'lxml')
 	node = tree.find('rdf:rdf',{'xml:base':True})
 	if(node):
+		node=node
+	else: 
+		node = tree.find('ontology',{'xml:base':True})
+	if(node):
 	   	file_dict[node['xml:base']]=filename
 
 def main():
-	file_dict = {}
+	if os.path.isfile(os.path.join('pickle','file_dict.p')):
+		with open(os.path.join('pickle','file_dict.p'), 'rb') as f:
+			file_dict=pickle.load(f)
+	else : file_dict = {}
 
-	for filename in os.listdir('all_ontologies'):
+	for filename in os.listdir(file_from):
 	    parsing(filename,file_dict)
 
 	copy_files(file_dict)
