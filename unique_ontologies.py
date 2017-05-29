@@ -22,7 +22,8 @@ def parsing(filename,file_dict):
 	else: 
 		node = tree.find('ontology',{'xml:base':True})
 	if(node):
-	   	file_dict[node['xml:base']]=filename
+		if(node['xml:base'] not in file_dict.keys()):
+	   		file_dict[node['xml:base']]=filename
 
 def main():
 	files=[]
