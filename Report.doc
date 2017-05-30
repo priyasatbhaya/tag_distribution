@@ -253,3 +253,52 @@ We are testing 'unique_ontologies.py' script for a large number of files, the ob
 3. Unfortunately not able to get the results as the data set is huge, so will start off with a small number of files.
 
 
+
+							DAY 16: 24.05.17
+
+1. all the ontologies are downloaded. 
+
+2. Executed the unique_ontologies.py with 644 ontologies, but my laptop has 8GB RAM and it is crashing and for a small number of ontologies, it is working fine.
+
+
+
+							DAY 17: 25.05.17
+
+
+1.Running the script for a limited number of scripts at once and then will repeat it till all ontologies are visited.
+
+
+
+							DAY 18: 26.05.17
+
+
+Downloaded ontologies from https://bartoc.org/en/top-rated-points 
+
+
+
+							DAY 19: 27.05.17
+
+
+
+1.I tried running the ontologies in batches of 11 but after a certain point again the system crashes as the dictionary becomes huge. So, we will need a better system.
+
+2.Computed an excel file of the total number of ontologies from each registry.
+
+
+
+
+							DAY 20: 28.05.17 (Sunday)
+
+
+							DAY 21: 29.05.17
+							   
+							   (Meeting)
+
+
+1. The pickle file 'file_dict' is generated for the given 1079 ontologies and out of which we got 760 unique ontologies stored in 'ontology_set'
+
+2. I have written a script 'link_extracter' which grabs all external links in Swoogle and for all its 100 pages and generates a text file named 'test.txt', then we wget with the command 'wget -t 1 --timeout=60 -i links1.txt' that text file to download the ontologies.
+
+3. Till now I am able to download 1208 new ontologies from Swoogle, I will be downloading more from there.
+
+
