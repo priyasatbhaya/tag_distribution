@@ -6,10 +6,6 @@ import shutil
 file_from ='all_ontologies'
 file_to = 'ontology_set'
 
-'''def copy_files(file_dict):
-	for key in file_dict.keys():
-			shutil.copy2(os.path.join(file_from, file_dict[key]), os.path.join(file_to, file_dict[key]))'''
-
 def parsing(filename,file_dict):
 	
 	infile = open(os.path.join(file_from, filename),"r")
@@ -31,8 +27,6 @@ def main():
 
 	for filename in os.listdir(file_from):
 		parsing(filename,file_dict)
-
-	#copy_files(file_dict,files)
 
 	print file_dict
 
