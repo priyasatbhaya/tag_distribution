@@ -16,7 +16,7 @@ def main():
 			file_dict=pickle.load(f)
 	else : file_dict = {}
 
-	copy_files(file_dict,files)
+	copy_files(file_dict)
 
 	print file_dict
 
