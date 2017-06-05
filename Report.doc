@@ -265,14 +265,18 @@ We are testing 'unique_ontologies.py' script for a large number of files, the ob
 							DAY 17: 25.05.17
 
 
-1.Running the script for a limited number of scripts at once and then will repeat it till all ontologies are visited.
+1. Running the script for a limited number of scripts at once and then will repeat it till all ontologies are visited.
+
+2. Re-written 'unique_ontologies.py' to run the script for batch files and read the existing 'file_dict.p'
 
 
 
 							DAY 18: 26.05.17
 
 
-Downloaded ontologies from https://bartoc.org/en/top-rated-points 
+1. Downloaded ontologies from https://bartoc.org/en/top-rated-points 
+
+3. Reduced the complexity of the program 'unique_ontologies.py'
 
 
 
@@ -298,7 +302,7 @@ Downloaded ontologies from https://bartoc.org/en/top-rated-points
 1. The pickle file 'file_dict' is generated for the given 1079 ontologies and out of which we got 760 unique ontologies stored in 'ontology_set'
 
 
-2. I have written a script 'link_extracter' which grabs all external links in Swoogle and for all its 100 pages and generates a text file named    	'test.txt', then we wget with the command 'wget -t 1 --timeout=60 -i links1.txt' that text file to download the ontologies.
+2. I have written a script 'link_extracter.py' which grabs all external links in Swoogle and for all its 100 pages and generates a text file named    	'links.txt', then we wget with the command 'wget -t 1 --timeout=60 -i links.txt' that text file to download the ontologies.
 
 
 3. Till now I am able to download 1208 new ontologies from Swoogle, I will be downloading more from there.
@@ -319,7 +323,7 @@ Downloaded ontologies from https://bartoc.org/en/top-rated-points
 	1.2. rdf
 
 
-2.Running the script 'link_extracter' for the following searches each of 100 pages:
+2. Running the script 'link_extracter.py' for the following searches each of 100 pages:
 
 	2.1. xrdf
 
@@ -328,3 +332,93 @@ Downloaded ontologies from https://bartoc.org/en/top-rated-points
 	2.3. xml
 
 	2.4. obo
+
+
+							DAY 23: 31.05.17
+
+
+
+1. Running the script 'link_extracter' for the 'svn' each of 100 pages.
+
+2. Recalculated the excel file of 'total_ontologies' from each registry.
+
+
+
+
+							DAY 24: 1.06.17
+
+
+
+1. Downloaded 2966 ontologies from Swoogle.
+
+2. Challenge is to convert other formats to rdf or owl formats.
+
+3. Reduced the complexity of the program 'unique_ontologies.py' by separating the copy file part to a different script.
+
+
+
+							DAY 25: 2.06.17
+
+
+
+1. Using jena rdfcat to convert ttl and n3 to rdf format.
+
+2. Installing apache-jena-3.3.0, then setting the path variable as
+
+	export JENAROOT=the directory you downloaded Jena to
+	export PATH=$PATH:$JENAROOT/bin	
+
+3. Wrote a script 'copy_to_ontology_set.py' to copy the unique ontologies retreived from 'file_dict.p' to 'ontology_set' directory, where the ontology data set is stored in 'all_ontologies' directory 
+
+
+
+
+
+							DAY 26: 3.06.17
+
+
+
+
+1. Wrote a script 'ttl_to_rdf.py' which calls the jena rdfcat for all files in the source directory to convert ontologies from ttl or n3 format to rdf format and stores them in the current directory.
+
+2. Copy the script 'ttl_to_rdf.py' in the directory you downloaded Jena and also copy the source directory containing the ontologies to be converted.
+
+
+
+
+							DAY 27: 4.06.17 (Sunday)
+
+							DAY 28: 5.06.17 
+
+
+
+1. Started writing the paper in google doc.
+
+2. Added some features to 'unique_ontologies.py' script to consider XML format ontologies as well with the following case:
+
+	2.1. to identify the base URI from <rdf:description> tag with rdf:about as the attribute which contains the base URI.
+
+	2.2. to identify the base URI from <owl:ontology> tag with rdf:about as the attribute which contains the base URI.
+
+
+
+
+							DAY 29: 6.06.17
+
+
+
+1. Documented the following scripts:
+
+	1.1. 'unique_ontologies.py'
+
+	1.2. 'tag.py'
+
+	1.3. 'ttl_to_rdf.py'
+
+	1.4. 'copy_to_ontology_set'
+
+	1.5. 'link_extracter.py' 
+
+2. Running all the scripts again with the modified 'unique_ontologies.py'
+
+
