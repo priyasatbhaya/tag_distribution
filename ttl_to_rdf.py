@@ -17,5 +17,5 @@ for filename in os.listdir(file_from):
 	newname=filename[:-4]
 	# converts ttl ontology files to rdf 
 	# change ttl to n3 in case you want n3 to rdf conversions
-	command="rdfcat -out rdf %s > %s.rdf" % (os.path.join('ttl',filename),newname)
+	command="rdfcat -out rdf %s > %s.rdf" % (os.path.join(file_from,filename),newname)
 	os.system(command)
