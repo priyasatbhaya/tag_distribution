@@ -31,23 +31,23 @@ def parsing(filename,file_dict):
 	node=tree.find('rdf:rdf',{'xml:base':True})
 	if (node):
 		file_dict[node['xml:base']]=filename
-	else :
+	if node is None:
 		node=tree.find('ontology',{'xml:base':True})
-	if(node):
-		file_dict[node['xml:base']]=filename
-	else :
+		if(node):
+			file_dict[node['xml:base']]=filename
+	if node is None:
 		node=tree.find('owl:ontology',{'xml:base':True})
-	if(node):
-		file_dict[node['xml:base']]=filename
-	else :
+		if(node):
+			file_dict[node['xml:base']]=filename
+	if node is None :
 		node=tree.find('owl:ontology',{'rdf:about':True})
-	if(node):
-		file_dict[node['rdf:about']]=filename
-	else :
+		if(node):
+			file_dict[node['rdf:about']]=filename
+	if node is None:
 		node = tree.find('rdf:description',{'rdf:about':True})
-	if(node):
-		x=node['rdf:about'].split('#')[0]+'#'
-		file_dict[x]=filename
+		if(node):
+			x=node['rdf:about'].split('#')[0]+'#'
+			file_dict[x]=filename
 
 def main():
 	#checks if file_dict exists
