@@ -28,13 +28,26 @@ def parsing(filename,file_dict):
 	# builds a tree
 	tree = BeautifulSoup(contents,'lxml')
 	# search for xml:base
-	node = tree.find('rdf:rdf',{'xml:base':True})
+	node=tree.find('rdf:rdf',{'xml:base':True})
+	if (node):
+		file_dict[node['xml:base']]=filename
+	else :
+		node=tree.find('ontology',{'xml:base':True})
 	if(node):
-		node=node
-	else: 
-		node = tree.find('ontology',{'xml:base':True})
+		file_dict[node['xml:base']]=filename
+	else :
+		node=tree.find('owl:ontology',{'xml:base':True})
 	if(node):
-	   	file_dict[node['xml:base']]=filename
+		file_dict[node['xml:base']]=filename
+	else :
+		node=tree.find('owl:ontology',{'rdf:about':True})
+	if(node):
+		file_dict[node['rdf:about']]=filename
+	else :
+		node = tree.find('rdf:description',{'rdf:about':True})
+	if(node):
+		x=node['rdf:about'].split('#')[0]
+		file_dict[x]=filename
 
 def main():
 	#checks if file_dict exists
@@ -47,7 +60,7 @@ def main():
 	for filename in os.listdir(file_from):
 		parsing(filename,file_dict)
 
-	print file_dict
+	#print file_dict
 
 	#pickle 'file_dict' as 'file_dict.p' in 'pickle' directory 
 	with open(os.path.join('pickle','file_dict.p'), 'wb') as f:
