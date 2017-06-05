@@ -401,6 +401,7 @@ We are testing 'unique_ontologies.py' script for a large number of files, the ob
 	2.2. to identify the base URI from <owl:ontology> tag with rdf:about as the attribute which contains the base URI.
 
 
+3. Converted BioPortal ttl ontology files to rdf format using 'ttl_to_rdf.py' script
 
 
 							DAY 29: 6.06.17
@@ -420,5 +421,9 @@ We are testing 'unique_ontologies.py' script for a large number of files, the ob
 	1.5. 'link_extracter.py' 
 
 2. Running all the scripts again with the modified 'unique_ontologies.py'
+
+3. From Swoogle 404 unique ontologies found out of 2966 ontologies 
+
+
 
 
