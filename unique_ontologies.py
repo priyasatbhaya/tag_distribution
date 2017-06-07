@@ -5,8 +5,6 @@ of its URI's this information is stored in a dictionary 'file_dict' with URI as 
 for each URI.
 
 file_from is the directory from where we read the ontology collection.
-file_to is the directory where we store the unique ontologies.
-
 We store 'file_dict' as 'file_dict.p' in 'pickle' directory.
 
 '''
@@ -18,8 +16,6 @@ import shutil
 
 # source directory
 file_from ='all_ontologies'
-# destination directory
-file_to = 'ontology_set'
 
 def parsing(filename,file_dict):
 	# reads each ontology file

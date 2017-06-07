@@ -404,7 +404,9 @@ We are testing 'unique_ontologies.py' script for a large number of files, the ob
 3. Converted BioPortal ttl ontology files to rdf format using 'ttl_to_rdf.py' script
 
 
+
 							DAY 29: 6.06.17
+
 
 
 
@@ -420,9 +422,43 @@ We are testing 'unique_ontologies.py' script for a large number of files, the ob
 
 	1.5. 'link_extracter.py' 
 
-2. Running all the scripts again with the modified 'unique_ontologies.py'
+2. Running all the scripts again with the modified 'unique_ontologies.py'.
 
-3. From Swoogle 404 unique ontologies found out of 2966 ontologies 
+3. From Swoogle 404 unique ontologies found out of 2966 ontologies.
+
+4. Started writing the paper.
+
+
+
+							DAY 30: 7.06.17
+
+
+
+1. Converted BioPortal ttl ontologies to rdf.
+
+2. Executed all the scripts for the new total set of ontologies after considering obo and ttl ontologies of BioPortal.
+
+3. Build graphs, pie charts, and histograms from the resultant Excel files.
+
+4. Wrote the paper.
+
+
+
+
+						    (Project Completion day)
+							DAY 31: 8.06.17
+						
+
+
+
+1. Added some documentation to the scripts.
+
+2. Paper writing.
+
+3. Uploaded all ontolgies and Excel files to the drive.
+
+3. Final Report, Paper and Code submission.
+
 
 
 

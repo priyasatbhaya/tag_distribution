@@ -1,6 +1,6 @@
 '''
 
-This script copies unique ontologies from 'file_dict.p' from the source directory to the destination directory.
+This script copies unique ontologies listed in 'file_dict' dictionary from the source directory to the destination directory.
 
 '''
 

@@ -1,7 +1,8 @@
 '''
 
 This script extracts all external(download) links from Swoogle website for all the pages from 1-100 and stores it in a text file 'links.txt'.
-The we wget the text file to download all the files from the extracted links to a given directory from the terminal with the command
+Then we wget the text file to download all the files from the links listed in the links.txt file to a given directory, then we run the 
+following command
 
 cd to the directory where you want to download the files
 wget -t 1 --timeout=60 -i links.txt
