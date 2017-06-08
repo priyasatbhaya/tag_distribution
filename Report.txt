@@ -1,0 +1,584 @@
+﻿Report Summer Internship 2017, ISI Bangalore
+
+
+                                9th May 2017 - 8th June 2017
+
+
+                                        DAY 1: 09.05.17
+
+
+
+
+1. OWL Web Language: java interface used to represent Semantic Web ontologies, collections of triplets
+
+
+
+
+        1.1. Semantic Web:
+A proposed development of the World Wide Web in which data in web pages is structured and tagged in such a way that it can be read directly by computers.
+
+
+        1.2.RDF(Resource Description Framework):
+A model for encoding semantic relationships between items of data so that these relationships can be interpreted computationally. One application of RDF is data integration and data sharing, RDF triplets uses graphs as its Data structure.
+
+
+        1.3.Ontology:
+Study of entities and their relations. The W3C Web Ontology Language (OWL) is a Semantic Web language designed to represent rich and complex knowledge about things, groups of things, and relations between things.
+
+
+        1.4.jena: a java API for RDF
+
+
+2.Data Integration: 
+Data integration is the combination of technical and business processes used to combine data from disparate sources into meaningful and valuable information. A complete data integration solution delivers trusted data from a variety of sources.
+
+
+
+
+                                        DAY 2: 10.05.17
+                                                        
+                                           (Meeting)
+
+
+
+
+Discussion on the three possible topics to be worked on, they are:
+
+
+        1. A lightweight parser for data transformation.
+2. An UI to support data annotation. This Interface will be designed as a plugin to a software tool. 
+3. A tool to count the XML tags different ontologies uses, to find the distribution of each tag.
+
+
+We went with the third option, shared some ontologies and an excel sheet which manually counted the tags, to be used for testing purpose.
+
+
+The Idea and the work plan: The main idea is to find the distribution of each tag among different files.
+
+
+1. Create a parser which identifies the first occurrence of each tag inside <Ontology> tag or <owl:Ontology> tag.
+
+
+2. Create a table with each tag as the row and two columns one with a bit string which represents in which all file the particular tag is present, where the position of the bit represents the file number and the second column with the total number of files the tag is present in.
+
+
+        3. Store this table in pickle format for further use.
+
+
+
+
+
+
+                                        DAY 3: 11.05.17
+
+
+
+
+1. Created Git private Repository named tag_distribution with biswanathdutta and priyasatbhaya as the collaborators.
+
+
+2. We will be considering .xrdf and .owl files for parsing the tags.
+
+
+While parsing we consider the tags inside the <Ontology> tag or <owl:Ontology> tag, we have three cases for that 
+
+
+        1. <Ontology>
+        2. <owl:Ontology>
+3. sometimes the tags are present inside <Annotation> tag as the abbreviatedIRI in <AnnotationProperty/> tag.
+        Example
+        <Annotation><AnnotationProperty abbreviatedIRI="rdfs:comment"/> </Annotation>
+
+
+
+
+
+
+     (Coding Period Started)
+
+
+                                        DAY 4: 12:05.17 
+
+
+
+
+1. The coding of the project started the first task was to scrap the tags for that will be using BeautifulSoup. 
+
+
+2. Coded the project with all the functions from identifying the tags to storing the required information in pickle format.
+
+
+        
+                                        DAY 5: 13.05.17
+
+
+
+
+1. Added the third condition for <Ontology> children tags appearing inside <Annotation> tag as the abbreviatedIRI in <AnnotationProperty/> tag.
+
+
+2. We are handling a different case, the aim is to come up with a more elegant solution.
+
+
+3. Writing the build instructions and dependency list for the project in README.markdown 
+
+
+
+
+                                        DAY 6: 14.05.17 (Sunday)
+
+
+                                        DAY 7: 15.05.17
+
+
+The challenge was to come up with a more elegant solution for parsing tags like <Annotation><AnnotationProperty abbreviatedIRI="rdfs:comment"/> </Annotation> So, we have come up with a better way where we do not use element tree anymore we deal with while using BeautifulSoup only.
+
+
+So the code was changed to adapt the new change.
+
+
+
+
+                                        DAY 8: 16.05.17
+
+
+                                             (Meeting)
+
+
+Discussed the following points:
+
+
+1. Storing the generated files in excel format or text format with suited excel delimiters, for future data interpretations.
+2. Creating a new dictionary to store the total number of distinct tags appears in each ontology file.
+
+
+3. Sort the result with the most popular tags appearing in the front
+
+
+
+
+                                        DAY 9: 17.05.17
+
+
+
+
+1. Added a list of files with total number of tags present in each of them.
+
+
+2. Sorted the lists with most popular tags appearing in the front.
+
+
+3. Generating excel file ".xlsx" for the lists.
+
+
+
+
+                                        DAY 10: 18.05.17
+
+
+                                              (Meeting)
+
+
+
+
+1. Introduced additional checks for children tags. 
+
+
+2. Enhanced the modularity of the code with each function used for performing a particular task, in order to make the code reusable and more readable.
+
+
+Discussed the following points:
+
+
+1.Semi-automate the download of the .owl and .rdf files from a list of registries
+
+
+2.We will have a different directory for each registry, then we merge all the ontologies in one directory then we create another directory containing only the unique ontologies, for that we use a script to identify each ontology based on the base URI.
+
+
+
+
+                                        DAY 11: 19.05.17
+
+
+List of Registries:
+
+
+                Colore(https://code.google.com/p/colore/source/browse/trunk/ontologies/approximate_point) 
+        DAML (http://www.daml.org/ontologies/) 
+        DERI (http://vocab.deri.ie/) 
+        LOV (http://lov.okfn.org/dataset/lov) 
+        OBO Foundry (http://www.obofoundry.org/) 
+        Maven (http://mvnrepository.com/artifact/edu.stanford.protege) 
+        MISO (http://www.sequenceontology.org/) 
+        MMI (http://mmisw.org/) 
+        ONKI (http://onki.fi/en/browser/) 
+        Ontohub (https://ontohub.org/ontologies) 
+        ROMULUS  (http://www.thezfiles.co.za/ROMULUS/) 
+        Schemapedia (http://datahub.io/dataset/schemapedia) 
+        SHOE (http://www.cs.umd.edu/projects/plus/SHOE/onts/) 
+        OOR Open Ontology Repository (http://sandbox.oor.net/ontologies) 
+        OntoSelect (http://olp.dfki.de/ontoselect/) 
+Protege_Ontology_Library(https://protegewiki.stanford.edu/wiki/Protege_Ontology_Library) 
+
+
+Some Registries whose ontology we already have:
+
+
+        Bio-Portal (https://bioportal.bioontology.org/) 
+        AgroPortal (http://agroportal.lirmm.fr/ontologies) 
+
+
+
+
+1. The first task was to find a tool to download all the ontologies in a registry for that we will be using FoxySpider it is a firefox extension.
+
+
+        The following registries are already completed:
+
+
+                DERI (http://vocab.deri.ie/) 
+                LOV (http://lov.okfn.org/dataset/lov) 
+                OBO Foundry (http://www.obofoundry.org/) 
+                MISO (http://www.sequenceontology.org/) 
+
+
+        There are some issues with the following:
+
+
+1. I am not able to find ontologies to be downloaded for the following sites Colore (https://code.google.com/p/colore/source/browse                         /trunk/ontologies/approximate_point) 
+
+
+                2.The following registries not working:
+                        DAML (http://www.daml.org/ontologies/) 
+                        Maven (http://mvnrepository.com/artifact/edu.stanford.protege) 
+
+
+3.MMI (http://mmisw.org/) contains URI so it's not getting captured by the FoxySpider
+
+
+                                                                
+DAY 12: 20.05.17
+
+
+
+
+There were some issues with some of the registries, but some could be resolved and they are:
+
+
+        Protege_Ontology_Library(https://protegewiki.stanford.edu/wiki/Protege_Ontology_Library)
+        
+        ROMULUS  (http://www.thezfiles.co.za/ROMULUS/) 
+
+
+                Schemapedia (http://datahub.io/dataset/schemapedia)  
+
+
+MMI (http://mmisw.org/)  Used 'wget' for this as it was list of URI's and LinkGraber to grab all the links on that page
+
+
+But we still have the following issues with the rest of the registries:
+
+
+        1.The following registries are not working:
+                DAML (http://www.daml.org/ontologies/) 
+                Maven (http://mvnrepository.com/artifact/edu.stanford.protege) 
+                        OntoSelect (http://olp.dfki.de/ontoselect/) service unavailable
+                        OOR Open Ontology Repository (http://sandbox.oor.net/ontologies) 
+
+
+        2. I am not able to find ontologies to be downloaded for the following sites
+                    Colore(https://code.google.com/p/colore/source/browse/trunk/ontologies/approximate_point)                      
+                    SHOE (http://www.cs.umd.edu/projects/plus/SHOE/onts/) 
+                    ONKI (http://onki.fi/en/browser/) 
+
+
+                3. Can't automate the download from here some license problem
+                       Ontohub (https://ontohub.org/ontologies)  
+                                                                                                                                                
+DAY 13: 21.05.17 (Sunday)
+
+
+                                        DAY 14: 22.05.17
+
+
+
+
+The following things have been completed:
+
+
+1. We have now 594 total ontologies extracted from the given registries.
+
+
+2. A folder is created containing unique ontologies and we generate results on basis of the unique ontologies differentiated on the basis of its URI
+3. We are storing all the unique files in a dictionary 'file_dict' with URI as the keys and respective filename as its value, stored in pickle format under the pickle folder
+
+
+4. Now we have some new folders and files:
+        
+                 ontology_set: contains all the unique ontologies from which 'tag.py' reads files
+        
+                 all_ontologies: all the ontologies we want to compute result from
+         
+                 registries: the folder wise stored ontologies from each registry 
+         
+unique_ontologies.py : the sript which generates the 'file_dict', the dictionary which stores the unique ontology file names and also stores the unique ontology files in the 'unique' folder
+
+
+5. In 'unique_ontologies.py' we are using 'shutil' to copy the files.
+
+
+
+
+
+
+                                        DAY 15: 23.05.17
+
+
+
+
+We are testing 'unique_ontologies.py' script for a large number of files, the observations are as follows:
+
+
+1. It is almost consuming 7.7 GB RAM at some point to build the 'file_dict' and to copy the files to 'unique' folder.
+
+
+2. Consuming more than two hours for 657 MB data for total 594 ontology files. 
+
+
+3. Unfortunately not able to get the results as the data set is huge, so will start off with a small number of files.
+
+
+
+
+                                        DAY 16: 24.05.17
+
+
+
+
+1. all the ontologies are downloaded. 
+
+
+2. Executed the unique_ontologies.py with 644 ontologies, but my laptop has 8GB RAM and it is crashing and for a small number of ontologies, it is working fine.
+
+
+
+
+DAY 17: 25.05.17
+
+
+1. Running the script for a limited number of scripts at once and then will repeat it till all ontologies are visited.
+
+
+2. Re-written 'unique_ontologies.py' to run the script for batch files and read the existing 'file_dict.p'
+
+
+
+
+                                        DAY 18: 26.05.17
+
+
+1. Downloaded ontologies from https://bartoc.org/en/top-rated-points 
+
+
+3. Reduced the complexity of the program 'unique_ontologies.py'
+
+
+
+
+                                        DAY 19: 27.05.17
+
+
+1. I tried running the ontologies in batches of 11 but after a certain point again the system crashes as the dictionary becomes huge. So, we will need a better system.
+
+
+2. Computed an excel file of the total number of ontologies from each registry.
+
+
+
+
+                                        DAY 20: 28.05.17 (Sunday)
+
+
+DAY 21: 29.05.17
+                                                           
+                                              (Meeting)
+
+
+
+
+1. The pickle file 'file_dict' is generated for the given 1079 ontologies and out of which we got 760 unique ontologies stored in 'ontology_set'
+
+
+
+
+2. I have written a script 'link_extracter.py' which grabs all external links in Swoogle and for all its 100 pages and generates a text file named            'links.txt', then we wget with the command 'wget -t 1 --timeout=60 -i links.txt' that text file to download the ontologies.
+
+
+
+
+3. Till now I am able to download 1208 new ontologies from Swoogle, I will be downloading more from there.
+
+
+                                        DAY 22: 30.05.17
+
+
+1. Running the 'unique_ontologies' script for the second batch of 1202 ontologies from Swoogle for the following search results:
+
+
+        1.1. owl
+
+
+        1.2. rdf
+
+
+2. Running the script 'link_extracter.py' for the following searches each of 100 pages:
+
+
+        2.1. xrdf
+
+
+        2.2. xml
+
+
+        2.3. xml
+
+
+        2.4. obo
+
+
+                                        DAY 23: 31.05.17
+
+
+1. Running the script 'link_extracter' for the 'svn' each of 100 pages.
+
+
+2. Recalculated the excel file of 'total_ontologies' from each registry.
+
+
+
+
+DAY 24: 1.06.17
+
+
+1. Downloaded 2966 ontologies from Swoogle.
+
+
+2. Challenge is to convert other formats to rdf or owl formats.
+
+
+3. Reduced the complexity of the program 'unique_ontologies.py' by separating the copy file part to a different script.
+
+
+DAY 25: 2.06.17
+
+
+1. Using jena rdfcat to convert ttl and n3 to rdf format.
+
+
+2. Installing apache-jena-3.3.0, then setting the path variable as
+
+
+        export JENAROOT=the directory you downloaded Jena to
+        export PATH=$PATH:$JENAROOT/bin        
+3. Wrote a script 'copy_to_ontology_set.py' to copy the unique ontologies retrieved from 'file_dict.p' to 'ontology_set' directory, where the ontology data set is stored in 'all_ontologies' directory 
+
+
+
+
+                                        DAY 26: 3.06.17
+
+
+1. Wrote a script 'ttl_to_rdf.py' which calls the jena rdfcat for all files in the source directory to convert ontologies from ttl or n3 format to rdf format and stores them in the current directory.
+
+
+2. Copy the script 'ttl_to_rdf.py' in the directory you downloaded Jena and also copy the source directory containing the ontologies to be converted.
+
+
+
+
+DAY 27: 4.06.17 (Sunday)
+
+
+                                        DAY 28: 5.06.17 
+
+
+1. Started writing the paper in google doc.
+
+
+2. Added some features to 'unique_ontologies.py' script to consider XML format ontologies as well with the following case:
+
+
+2.1. to identify the base URI from <rdf:description> tag with rdf:about as the attribute which contains the base URI.
+
+
+2.2. to identify the base URI from <owl:ontology> tag with rdf:about as the attribute which contains the base URI.
+
+
+
+
+3. Converted BioPortal ttl ontology files to rdf format using 'ttl_to_rdf.py' script
+
+
+
+
+DAY 29: 6.06.17
+
+
+1. Documented the following scripts:
+
+
+        1.1. 'unique_ontologies.py'
+
+
+        1.2. 'tag.py'
+
+
+        1.3. 'ttl_to_rdf.py'
+
+
+        1.4. 'copy_to_ontology_set'
+
+
+        1.5. 'link_extracter.py' 
+
+
+2. Running all the scripts again with the modified 'unique_ontologies.py'.
+
+
+3. From Swoogle 404 unique ontologies found out of 2966 ontologies.
+
+
+4. Started writing the paper.
+
+
+                                        DAY 30: 7.06.17
+
+
+1. Converted BioPortal ttl ontologies to rdf.
+
+
+2. Executed all the scripts for the new total set of ontologies after considering obo and ttl ontologies of BioPortal.
+
+
+3. Build graphs, pie charts, and histograms from the resultant Excel files.
+
+
+4. Wrote the paper.
+
+
+                                        (Project Completion day)
+
+
+                                              DAY 31: 8.06.17
+                                                
+1. Added some documentation to the scripts.
+
+
+2. Paper writing.
+
+
+3. Uploaded all ontologies and Excel files to the drive.
+
+
+3. Final Report, Paper and Code submission.
